@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"name": "Stasiun_Terminal",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Nama": "Stasiun Surabaya Gubeng", "x": 112.7526382, "y": -7.264869784, "Alamat": "Jl. Stasiun Gubeng, Pacar Keling, Kec. Tambaksari, Surabaya, Jawa Timur 60272" }, "geometry": { "type": "Point", "coordinates": [ 112.7526382, -7.264869784 ] } },
+{ "type": "Feature", "properties": { "Nama": "Stasiun surabaya kota", "x": 112.7415697, "y": -7.242908184, "Alamat": "JL. Stasiun 9, Surabaya, Jawa Timur 60161" }, "geometry": { "type": "Point", "coordinates": [ 112.7415697, -7.242908184 ] } },
+{ "type": "Feature", "properties": { "Nama": "Stasiun pasarturi", "x": 112.7320856, "y": -7.248696737, "Alamat": "Jl. Semarang No.1, Tembok Dukuh, Kec. Bubutan, Surabaya, Jawa Timur 60173" }, "geometry": { "type": "Point", "coordinates": [ 112.7320856, -7.248696737 ] } },
+{ "type": "Feature", "properties": { "Nama": "Stasiun wonokromo", "x": 112.739056, "y": -7.30187484, "Alamat": "Jagir, Kec. Wonokromo, Surabaya, Jawa Timur 60244" }, "geometry": { "type": "Point", "coordinates": [ 112.739056, -7.30187484 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terminal tanjung perak", "x": 112.7345255, "y": -7.199554999, "Alamat": "Perak Utara, Kec. Pabean Cantikan, Surabaya, Jawa Timur 60165" }, "geometry": { "type": "Point", "coordinates": [ 112.7345255, -7.199554999 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terimal bus osowilangun", "x": 112.6551487, "y": -7.217727495, "Alamat": "Jl. Tambak Osowilangun No.103, Tambak Osowilangun, Kec. Benowo, Surabaya, Jawa Timur 60191" }, "geometry": { "type": "Point", "coordinates": [ 112.6551487, -7.217727495 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terimal dukuh kupang", "x": 112.7117466, "y": -7.281339519, "Alamat": "Dukuh Kupang, Kec. Dukuhpakis, Surabaya, Jawa Timur 60225" }, "geometry": { "type": "Point", "coordinates": [ 112.7117466, -7.281339519 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terminal kedung cowek", "x": 112.7791205, "y": -7.212780303, "Alamat": "Jalan Tambak Wedi No.2, Kedung Cowek, Kec. Bulak, Surabaya, Jawa Timur 60134" }, "geometry": { "type": "Point", "coordinates": [ 112.7791205, -7.212780303 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terminal keputih", "x": 112.8017565, "y": -7.29469253, "Alamat": "Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111" }, "geometry": { "type": "Point", "coordinates": [ 112.8017565, -7.29469253 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terminal intermoda joyoboyo", "x": 112.7366106, "y": -7.293402622, "Alamat": "Jl. Joyoboyo No. 1, Jawa Timur" }, "geometry": { "type": "Point", "coordinates": [ 112.7366106, -7.293402622 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terminal purbaya 1", "x": 112.7307695, "y": -7.349933467, "Alamat": "Kedungrejo, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur" }, "geometry": { "type": "Point", "coordinates": [ 112.7307695, -7.349933467 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terimal purbaya", "x": 112.7252093, "y": -7.350497633, "Alamat": "Kasian, Bungurasih, Kec. Waru, Kabupaten Sidoarjo, Jawa Timur" }, "geometry": { "type": "Point", "coordinates": [ 112.7252093, -7.350497633 ] } },
+{ "type": "Feature", "properties": { "Nama": "Terminal benowo", "x": 112.6079831, "y": -7.235563374, "Alamat": "Benowo, Kec. Pakal, Surabaya, Jawa Timur 60195" }, "geometry": { "type": "Point", "coordinates": [ 112.6079831, -7.235563374 ] } }
+]
+}

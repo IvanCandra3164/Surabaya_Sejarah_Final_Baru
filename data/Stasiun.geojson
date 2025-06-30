@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "Stasiun",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Nama": "Stasiun Surabaya Gubeng", "x": 112.7526382, "y": -7.264869784, "Alamat": "Jl. Stasiun Gubeng, Pacar Keling, Kec. Tambaksari, Surabaya, Jawa Timur 60272" }, "geometry": { "type": "Point", "coordinates": [ 112.7526382, -7.264869784 ] } },
+{ "type": "Feature", "properties": { "Nama": "Stasiun surabaya kota", "x": 112.7415697, "y": -7.242908184, "Alamat": "JL. Stasiun 9, Surabaya, Jawa Timur 60161" }, "geometry": { "type": "Point", "coordinates": [ 112.7415697, -7.242908184 ] } },
+{ "type": "Feature", "properties": { "Nama": "Stasiun pasarturi", "x": 112.7320856, "y": -7.248696737, "Alamat": "Jl. Semarang No.1, Tembok Dukuh, Kec. Bubutan, Surabaya, Jawa Timur 60173" }, "geometry": { "type": "Point", "coordinates": [ 112.7320856, -7.248696737 ] } },
+{ "type": "Feature", "properties": { "Nama": "Stasiun wonokromo", "x": 112.739056, "y": -7.30187484, "Alamat": "Jagir, Kec. Wonokromo, Surabaya, Jawa Timur 60244" }, "geometry": { "type": "Point", "coordinates": [ 112.739056, -7.30187484 ] } }
+]
+}

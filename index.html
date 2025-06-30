@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peta Wisata Sejarah Surabaya</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.5/proj4.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Surabaya Heritage Map</div>
+    <ul>
+      <li><a href="#hero">Beranda</a></li>
+      <li><a href="#features">Fitur</a></li>
+      <li><a href="#map-section">Peta</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+    <a href="#map-section" class="btn-cta">Jelajahi Peta</a>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Jelajahi Wisata Sejarah Surabaya</h1>
+        <p>Temukan kisah, tempat, dan rute menarik di Kota Pahlawan lewat peta interaktif. Pelajari sejarah sambil berkeliling!</p>
+        <a href="#map-section" class="btn-primary">Mulai Jelajah</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Surabaya dari Titik ke Titik</h2>
+      <p class="subtitle">Jejak Sejarah dalam Satu Peta
+Peta interaktif ini menyatukan lokasi dan narasi, menghadirkan pengalaman baru dalam menelusuri sejarah kota secara visual dan informatif.
+</p>
+      <div class="feature-cards">
+        <div class="card">
+          <div class="card-icon">🗺️</div>
+          <h3>Interaktif & Mudah</h3>
+          <p>Zoom, geser peta, dan klik marker untuk info lengkap tentang setiap lokasi sejarah.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📍</div>
+          <h3>Situs Sejarah</h3>
+          <p>Tandai tempat-tempat penting seperti Tugu Pahlawan, House of Sampoerna, dan lainnya.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚏</div>
+          <h3>Layer Transportasi</h3>
+          <p>Aktifkan layer transportasi publik untuk melihat lokasi halte bus, terminal, dan stasiun terdekat.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🚉</div>
+            <h3>Rute Cerdas</h3>
+            <p>Tentukan titik awal dan tujuan untuk mendapatkan rute kendaraan terbaik di dalam kota.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="map-section">
+      <h2>Peta Wisata Sejarah Surabaya</h2>
+      <div class="map-container">
+        <div id="info-panel" class="info-panel">
+          <h3>Informasi Lokasi</h3>
+          <div id="info-content">
+            <p>Klik pada marker di peta untuk melihat detail lokasi.</p>
+          </div>
+        </div>
+        
+        <div id="map"></div>
+        
+        <div id="directions-panel" class="directions-panel">
+            <h3>Petunjuk Arah & Mode Rute</h3>
+
+            <div class="routing-actions">
+              <h4>Pilih Mode Rute</h4>
+              <div class="btn-group">
+                <button id="route-from-me-btn" class="btn-action">Dari Lokasi Saya</button>
+                <button id="route-by-click-btn" class="btn-action">Pilih Titik di Peta</button>
+              </div>
+            </div>
+            
+            <div class="custom-route-mode">
+                <h4>Mode Rute Kustom</h4>
+                <button id="custom-route-btn" class="btn-action">Buat Rute Kustom (A → B)</button>
+            </div>
+
+            <div id="waypoint-status">
+              <p>Titik Awal: <span id="start-point-name">Belum Dipilih</span></p>
+              <p>Titik Tujuan: <span id="end-point-name">Belum Dipilih</span></p>
+            </div>
+
+            <button id="run-route-btn" class="btn-action run-route">Run Rute</button>
+
+            <div id="directions-content">
+              <p>Pilih mode rute dan titik di peta, lalu klik "Run Rute".</p>
+            </div>
+            
+            <button id="clear-route-btn" class="btn-secondary clear-route">Hapus Rute</button>
+        </div>
+      </div>
+    </section>
+
+    <footer id="team">
+      <h2>Tim Pembuat</h2>
+      <p>Project ini adalah hasil kolaborasi dari para mahasiswa Teknik Geomatika UPN "Veteran" Yogyakarta Angkatan 2022 .</p>
+      <div class="team-members">
+          <div class="team-member">
+              <h4>Ivan Candra</h4>
+              <p>117220039</p>
+          </div>
+          <div class="team-member">
+              <h4>Nuraini Hanifa Hartadi</h4>
+              <p>117220002</p>
+          </div>
+          <div class="team-member">
+              <h4>Ruth Joy Ernes Sitorus</h4>
+              <p>117220045</p>
+          </div>
+      </div>
+      <p class="copyright">© 2025 Surabaya Heritage Map. Kelompok 2.</p>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.min.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

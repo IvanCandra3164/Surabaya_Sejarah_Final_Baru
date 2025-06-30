@@ -1,0 +1,398 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #007ACC;
+}
+.navbar ul {
+  display: flex;
+  gap: 24px;
+}
+.navbar ul li {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Beri padding-top untuk menghindari overlay header fixed */
+main {
+  padding-top: 70px; 
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/76/2024/07/18/IMG_20240718_163420-2166100481.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.hero-content p {
+  font-size: 18px;
+  color: #f0f0f0;
+  margin-bottom: 24px;
+}
+.btn-primary, .btn-cta {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #007ACC;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover, .btn-cta:hover {
+  background-color: #005fa3;
+}
+
+/* Section Features */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 280px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: #007ACC;
+}
+
+/* Section Peta Interaktif */
+#map-section {
+  padding: 60px 0 40px;
+  background-color: #eef5fc;
+  text-align: center;
+}
+#map-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* === PERUBAHAN UTAMA DI SINI === */
+.map-container {
+  display: flex; /* Menggunakan Flexbox untuk tata letak 3 kolom */
+  width: 95%; /* Perlebar kontainer utama */
+  max-width: 1600px; /* Beri ruang lebih untuk 3 kolom */
+  height: 650px; /* Tingkatkan tinggi agar lebih seimbang */
+  margin: 0 auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  /* Hapus position relative karena panel rute tidak lagi absolut */
+}
+
+#info-panel {
+  flex: 0 0 320px; /* Lebar tetap untuk panel info */
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto; /* Scroll jika konten panjang */
+  border-right: 1px solid #eee;
+  text-align: left;
+}
+#info-panel h3, #info-panel p { text-align: left; }
+#info-content p { text-align: justify; }
+
+#map {
+  flex: 1; /* Peta akan mengisi ruang yang tersisa */
+  height: 100%;
+}
+
+/* === PANEL RUTE DIPERBARUI TOTAL === */
+.directions-panel {
+  flex: 0 0 320px; /* Lebar tetap untuk panel rute */
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto; /* Scroll jika konten panjang */
+  text-align: left;
+  border-left: 1px solid #eee; /* Garis pemisah dari peta */
+  /* Hapus semua properti position absolute */
+}
+
+.directions-panel h3 {
+  font-size: 20px;
+  color: #007ACC;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+/* === AKHIR PERUBAHAN UTAMA === */
+
+.routing-actions h4, .custom-route-mode h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn-action {
+  width: 100%;
+  padding: 10px;
+  background-color: #007ACC;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-action:hover { background-color: #005fa3; }
+
+.btn-action.run-route {
+  background-color: #28a745;
+  margin-top: 15px;
+}
+.btn-action.run-route:hover { background-color: #218838; }
+
+#waypoint-status {
+  background-color: #f0f8ff;
+  border: 1px solid #e0f0ff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+}
+#waypoint-status span {
+  font-weight: 600;
+  color: #007ACC;
+}
+
+#directions-content {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+/* **ATURAN BARU YANG PENTING** */
+/* Sembunyikan panel petunjuk default dari Leaflet Routing Machine */
+.leaflet-routing-container.leaflet-control {
+    display: none !important;
+}
+
+/* Aturan untuk menata ringkasan dan petunjuk yang kita buat manual */
+.custom-routing-summary {
+  background-color: #e6f7ff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #b3e0ff;
+  margin-bottom: 15px;
+}
+.custom-routing-summary h3 {
+  margin: 0 0 10px 0; font-size: 16px; color: #005fa3;
+}
+.custom-routing-summary p { margin: 5px 0; }
+
+.custom-routing-instructions h4 {
+  margin-top: 15px; margin-bottom: 10px; font-weight: 600;
+}
+.custom-routing-instructions ol {
+  list-style: decimal;
+  padding-left: 25px; /* Beri ruang untuk nomor */
+  margin: 0;
+}
+.custom-routing-instructions li {
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.custom-routing-instructions li span {
+  color: #555;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.btn-secondary.clear-route {
+  background-color: #dc3545;
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-secondary.clear-route:hover { background-color: #c82333; }
+
+
+/* === STYLE BARU UNTUK KONTROL LAYER === */
+.leaflet-control-layers {
+  border: 1px solid #007ACC;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+}
+.leaflet-control-layers-base label, .leaflet-control-layers-overlays label {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer / Team Section */
+footer#team {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+footer#team h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+footer#team p {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  color: #f0f0f0;
+}
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.team-member {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #00aaff;
+}
+.team-member p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #ccc;
+}
+footer#team .copyright {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+/* ======================================================= */
+/* BARU: STYLE UNTUK LAYER KEPADATAN PENDUDUK */
+/* ======================================================= */
+
+.info-kepadatan {
+  padding: 8px 10px;
+  font: 14px/16px Poppins, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.info-kepadatan h4 {
+  margin: 0 0 5px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+  background-color: rgba(255,255,255,0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.8;
+  border: 1px solid #999;
+}
+.legend strong {
+    font-weight: 600;
+}
